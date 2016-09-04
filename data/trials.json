@@ -1,0 +1,46 @@
+{
+    "experiments": [
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "sentence",
+            "numWindows": "2",
+            "data_file": "data/trialFiles.json",
+            "stimuli": "What is acceptor atoms?" 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "paragraph",
+            "numWindows": "2",
+            "data_file": "data/trialFiles.json",
+            "stimuli": "What is active filter? A filter that uses an amplifier in addition to reactive components to pass or reject selected frequencies." 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "phrase",
+            "numWindows": "2",
+            "data_file": "data/trialFiles.json",
+            "stimuli": "in the opposite direction" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "numWindows": "2",
+            "data_file": "data/trialFiles.json",
+            "stimuli": "What is acceptor atoms?" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "paragraph",
+            "numWindows": "2",
+            "data_file": "data/trialFiles.json",
+            "stimuli": "What is active filter? A filter that uses an amplifier in addition to reactive components to pass or reject selected frequencies." 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "phrase",
+            "numWindows": "2",
+            "data_file": "data/trialFiles.json",
+            "stimuli": "in the opposite direction" 
+        }        
+    ]
+}
