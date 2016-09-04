@@ -36,15 +36,25 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h1>Welcome!</h1>
                     <hr>
-                    <p>The startup interface provides the basic instructions to your participants, and also collect input from the participant/experimenter the participant ID so that you can generate the correct data log for a particular experiment session.</p>
+                    <p>This is an HCI (Human-Computer Interaction) experiment conducted by Zhu Duoduo for an assignment in CS4249 Phenomena and Theories of Human-Computer Interaction, National University of Singapore. </p>
+                    
+                    <p>The purpose of this experiment is to gather information about the performances of two copy-paste techniques under different scenarios. Participants are required to complete copy-paste tasks according to the instructions given.</p>
+                    
+                    <p>Participants will receive no compensation for completing this experiment. They are free to withdraw before or anytime during the experiment without the need to give any explanation. All personal information and results will be kept confidential and used for research purposes only.</p>
+                    
+                    
+                    <input id="consent" type="checkbox" checked="true" onclick="toggleButtonStatus();"> I have read the above information and agree to continue.
 
-                    <p>This is a template. Please write your participant number ID given by your experimenter. Participant IDs should only consist of alphanumeric characters.</p>
+                    <hr>
+
+                    <p>Please write your participant number ID given by your experimenter. Participant IDs should only consist of alphanumeric characters.</p>
+                    
                     <form class="form-inline" id="pid-form">
                         <div class="form-group">
                             <label for="pid">Participant ID</label>
                             <input name="pid" type="text" class="form-control" id="pid" placeholder="E.g. P01">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button id="submitPid" type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
@@ -57,7 +67,13 @@
         <script src="js/main.js"></script>
 
         <script>
+            function toggleButtonStatus() {
+                var btn = document.getElementById("submitPid");
+                btn.disabled = !btn.disabled;
+            }
+            
             $(function () {
+
                 $('#pid-form').submit(function (event) {
                     event.preventDefault();
                     var participantId = $('#pid').val();

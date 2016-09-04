@@ -47,8 +47,8 @@
                                 <td><span class="js-expt-granularity">Phrase</span></td>
                             </tr>
                             <tr>
-                                <td>Independent Variable 3</td>
-                                <td>???</td>
+                                <td>Number of Windows</td>
+                                <td><span class="js-expt-numWindows">NumWindows</span></td>
                             </tr>
                             <tr>
                                 <td>Trial</td>
@@ -58,7 +58,7 @@
                     </table>
                     <p>Please copy-paste the following <span class="js-expt-granularity">phrase</span> using the <span class="js-expt-technique">AUTOCOMPASTE</span> technique from one of the open windows.</p>
                     <div id="stimuli" class="alert alert-danger js-expt-stimuli">This is a long stimuli!</div>
-                    <button class="btn btn-primary btn-lg" onclick="next()">Next Task</button>
+                    <button class="btn btn-primary btn-lg" onclick="loadNext()">Next Task</button>
                 </div>
                 <div id="autocompaste" class="col-sm-9">
                     <div id="autocompaste-display"></div>
@@ -83,32 +83,67 @@
             var currentTrial;
             var totalNumberOfTrials;
             var headers = ['Participant id', 'Technique', 'Granularity',
-                            'Trial no', 'Stimuli', 'User Response', 'Trial Start Time',
+                            'Trial no', 'Block no', 'Stimuli', 'User Response', 'Trial Start Time',
                             'Trial End Time', 'Trial Time', 'Accuracy'];
             var trialData = [];
             var participantId;
 
-            function next () {
-                if (currentTrial !== 0) {
-                    // Save results of current trial
-                    var trialResult = ACPToolKit.getCurrentTrialState();
-
-                    var technique = trialResult.technique;
-                    var granularity = trialResult.granularity;
-                    var trialNum = currentTrial;
-                    var stimuli = trialResult.stimuli;
-                    var userResponse = trialResult.user_response;
-                    var trialStartTime = trialResult.start_time;
-                    var trialEndTime = trialResult.end_time;
-                    var trialDuration = trialResult.duration;
-                    var accuracy = stimuli === userResponse ? 1 : 0;
-
-                    var row = [participantId, technique, granularity, trialNum,
-                                stimuli, userResponse, trialStartTime,
-                                trialEndTime, trialDuration, accuracy];
-                    trialData.push(row);
+            var block = 1;
+            var trialMode = true;
+            
+            function loadNext() {
+                if(trialMode) {
+                    nextTrial();
+                } else {
+                    next();
                 }
+            }
+            
+            function next () {
+                    if (currentTrial !== 0) {
+                        // Save results of current trial
+                        var trialResult = ACPToolKit.getCurrentTrialState();
 
+                        var technique = trialResult.technique;
+                        var granularity = trialResult.granularity;
+                        var trialNum = currentTrial;
+                        var blockNum = block;
+                        var stimuli = trialResult.stimuli;
+                        var userResponse = trialResult.user_response;
+                        var trialStartTime = trialResult.start_time;
+                        var trialEndTime = trialResult.end_time;
+                        var trialDuration = trialResult.duration;
+                        var accuracy = stimuli === userResponse ? 1 : 0;
+
+                        var row = [participantId, technique, granularity, trialNum, blockNum,
+                                    stimuli, userResponse, trialStartTime,
+                                    trialEndTime, trialDuration, accuracy];
+                        trialData.push(row);
+                    }
+
+                    if (currentTrial < totalNumberOfTrials) {
+                        // Show the next trial
+                        ACPToolKit.presentTrial(trialsData[currentTrial]);
+                        currentTrial += 1;
+                        $('.js-expt-current-trial').text(currentTrial);
+                    } else {
+                        // Last trial completed
+                        //ACPToolKit.downloadTrialResults(trialData);
+                        //window.location = 'questionnaire-post.html';
+                        if(block < 3) {
+                            //continue
+                            alert("You have completed "+ block + " block(s)! Please rest for ~1 minute before continuing. Press 'OK' when you are ready.");
+                            block += 1;
+                            currentTrial = 0;
+                            next();
+                        } else {
+                            ACPToolKit.downloadTrialResults(trialData);
+                            window.location = 'questionnaire-post.html';
+                        }
+                    }
+            }
+
+            function nextTrial() {
                 if (currentTrial < totalNumberOfTrials) {
                     // Show the next trial
                     ACPToolKit.presentTrial(trialsData[currentTrial]);
@@ -116,13 +151,34 @@
                     $('.js-expt-current-trial').text(currentTrial);
                 } else {
                     // Last trial completed
-                    ACPToolKit.downloadTrialResults(trialData);
-                    window.location = 'questionnaire-post.html';
+                    
+                    alert("Hope you have a better understanding through the trials. Now let's start the experiment proper!");
+                    trialMode = false;
+                    
+                    $.get('data/experiments.json', function (data) {
+                        // Initialise experiments
+                        trialsData = data.experiments;
+                        currentTrial = 0;
+                        totalNumberOfTrials = trialsData.length;
+                        $('.js-expt-num-trials').text(totalNumberOfTrials);
+                        trialData.push(headers);
+                        next();
+                        participantId = ACPToolKit.getCurrentParticipantId();
+                    })
+
                 }
             }
-
+            
             $(document).ready(function () {
-                $.get('data/experiments.json', function (data) {
+                $.get('data/trials.json', function (data) {
+                    // Initialise experiments
+                    trialsData = data.experiments;
+                    currentTrial = 0;
+                    totalNumberOfTrials = trialsData.length;
+                    $('.js-expt-num-trials').text(totalNumberOfTrials);
+                    nextTrial();
+                })
+                /*$.get('data/experiments.json', function (data) {
                     // Initialise experiments
                     trialsData = data.experiments;
                     currentTrial = 0;
@@ -131,7 +187,8 @@
                     trialData.push(headers);
                     next();
                     participantId = ACPToolKit.getCurrentParticipantId();
-                })
+                })*/
+                
             });
         </script>
     </body>
