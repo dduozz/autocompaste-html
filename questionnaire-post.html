@@ -36,59 +36,202 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h1>Post-Experiment Questionnaire</h1>
                     <hr>
-                    <p>This part of the interface collects whatever post-experiment information. After the experiment, you want to collect more qualitative and quantitative feedback about the tested techniques. Some of the typical questions include, personal preferences, any difficulties participants experienced in the experiment, and areas of improvement. Please design a basic post-experimental questionnaire (no more than 10 questions).</p>
+                    <p>Dear participant <span class="js-pid pid"></span>, congratulations for completing the main experiment! Please fill in the following questionnaire to share your thoughts on the two copy-pasting techniques and/or the experiment.</p>
 
-                    <p>Current participant: <span class="js-pid pid"></span></p>
-
+                    <p>Please note that all questions marked with an asterisk ( * ) are mandatory. </p>
+                    
                     <form id="post-expt-form">
                         <div class="form-group">
-                            <label for="q1">Question 1 - Text</label>
-                            <input type="text" class="form-control" id="q1" name="q1" placeholder="Enter answer">
-                        </div>
-                        <div class="form-group">
-                            <label for="q2">Question 2 - Radio</label>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="q2" id="optionsRadios1" value="radio1">
-                                Radio response 1
+                            <label for="CCCVPerformance">On a scale of 1 to 5 with 5 being performing very well, rate the overall performance of the traditional Ctrl-C Ctrl-V technique. *</label>
+
+                              <label class="horiRadio">
+                                <input type="radio" name="CCCVPerformance" id="optionsRadios1" value="1">
+                                1
                               </label>
-                            </div>
-                            <div class="radio">
-                              <label>
-                                <input type="radio" name="q2" id="optionsRadios2" value="radio2">
-                                Radio response 2
+                            
+                              <label class="horiRadio">
+                                <input type="radio" name="CCCVPerformance" id="optionsRadios2" value="2">
+                                2
                               </label>
-                            </div>
+                            
+                              <label class="horiRadio">
+                                <input type="radio" name="CCCVPerformance" id="optionsRadios3" value="3">
+                                3
+                              </label>
+                            
+                              <label class="horiRadio">
+                                <input type="radio" name="CCCVPerformance" id="optionsRadios4" value="4">
+                                4
+                              </label>
+                           
+                              <label class="horiRadio">
+                                <input type="radio" name="CCCVPerformance" id="optionsRadios5" value="5">
+                                5
+                              </label>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="q3">Question 3 - Checkbox</label>
+                            <label for="ACPPerformance">On a scale of 1 to 5 with 5 being performing very well, rate the overall performance of the AutoComPaste technique. *</label>
+
+                              <label class="horiRadio">
+                                <input type="radio" name="ACPPerformance" id="optionsRadios1" value="1">
+                                1
+                              </label>
+                            
+                              <label class="horiRadio">
+                                <input type="radio" name="ACPPerformance" id="optionsRadios2" value="2">
+                                2
+                              </label>
+                            
+                              <label class="horiRadio">
+                                <input type="radio" name="ACPPerformance" id="optionsRadios3" value="3">
+                                3
+                              </label>
+                            
+                              <label class="horiRadio">
+                                <input type="radio" name="ACPPerformance" id="optionsRadios4" value="4">
+                                4
+                              </label>
+                           
+                              <label class="horiRadio">
+                                <input type="radio" name="ACPPerformance" id="optionsRadios5" value="5">
+                                5
+                              </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="CCCVAdvantage">What are the advantages of the traditional Ctrl-C Ctrl-V technique? *</label>
                             <div class="checkbox">
                               <label>
-                                <input type="checkbox" name="q3" value="checkbox1">
-                                Checkbox response 1
+                                <input type="checkbox" name="CCCVAdvantage" value="time saving">
+                                Time saving
                               </label>
                             </div>
                             <div class="checkbox">
                               <label>
-                                <input type="checkbox" name="q3" value="checkbox2">
-                                Checkbox response 2
+                                <input type="checkbox" name="CCCVAdvantage" value="high accuracy">
+                                High accuracy
                               </label>
                             </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="CCCVAdvantage" value="easy to learn">
+                                Easy to learn
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="CCCVAdvantage" value="intuitive to use">
+                                Intuitive to use
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                Others, please specify: 
+                                </label>
+                                <input type="text" class="form-control" id="CCCVAdvantage" name="CCCVAdvantage" >
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="CCCVLimitation">What are the limitations of the traditional Ctrl-C Ctrl-V technique? *</label>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="CCCVLimitation" value="not fast enough">
+                                Not fast enough
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="CCCVLimitation" value="difficult to select">
+                                Difficult to select target texts
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="CCCVLimitation" value="difficult to remember">
+                                Difficult to remember key combinations
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                Others, please specify: 
+                                </label>
+                                <input type="text" class="form-control" id="CCCVLimitation" name="CCCVLimitation" >
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ACPAdvantage">What are the advantages of the AutoComPaste technique? * </label>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="ACPAdvantage" value="time saving">
+                                Time saving
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="ACPAdvantage3" value="high accuracy">
+                                High accuracy
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="ACPAdvantage" value="easy to learn">
+                                Easy to learn
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="ACPAdvantage" value="intuitive to use">
+                                Intuitive to use
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    Others, please specify: 
+                                </label>
+                                <input type="text" class="form-control" id="ACPAdvantage" name="ACPAdvantage" >
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ACPLimitation">What are the limitations of the traditional Ctrl-C Ctrl-V technique? *</label>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="ACPLimitation" value="not fast enough">
+                                Not fast enough
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="ACPLimitation" value="not versatile">
+                                Not versatile
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="ACPLimitation" value="difficult to find">
+                                Difficult to find target texts in suggested list
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                Others, please specify: 
+                                </label>
+                                <input type="text" class="form-control" id="ACPLimitation" name="ACPLimitation" >
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="anyDifficulty">Did you experience any difficulty while completing this experiment? If yes, please specify.</label>
+                            <textarea class="form-control" id="anyDifficulty" name="anyDifficulty"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="q4">Question 4 - Select Options</label>
-                            <select class="form-control" name="q4">
-                                <option value="option1">Option response 1</option>
-                                <option value="option2">Option response 2</option>
-                                <option value="option3">Option response 3</option>
-                                <option value="option4">Option response 4</option>
-                                <option value="option1">Option response 5</option>
-                            </select>
+                            <label for="improvement">Can you identify any areas of improvement for the design of the experiment?</label>
+                            <textarea class="form-control" id="improvement" name="improvement"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="q5">Question 5 - Textarea</label>
-                            <textarea class="form-control" id="q5" name="q5" placeholder="Enter response"></textarea>
-                        </div>
+               
                         <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                     </form>
                 </div>
@@ -107,9 +250,21 @@
                     event.preventDefault();
                     var formResponses = $(this).serializeArray();
                     // Do your own form validation here.
+                    var fields = ["CCCVPerformance", "ACPPerformance"];
+                    var i, l = fields.length;
+                    var fieldname;
+                    for (i = 0; i < l; i++) {
+                        fieldname = fields[i];
+                        if (document.forms["post-expt-form"][fieldname].value === "") {
+                          alert("Please ensure all required fields are filled!");
+                          return false;
+                        }
+                    }
+                    
                     ACPToolKit.downloadFormData(formResponses, 'post');
                     ACPToolKit.clearAllData();
-                    alert('Thank you for your participation!');
+                    //alert('Thank you for your participation!');
+                    window.location = 'debrief.html';
                 });
             });
         </script>
