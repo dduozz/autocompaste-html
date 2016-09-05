@@ -154,7 +154,7 @@
                     alert("Hope you have a better understanding through the trials. Now let's start the experiment proper!");
                     trialMode = false;
                     
-                    $.get('data/trials.json', function (data) {
+                    $.get('data/trials_1.json', function (data) {
                         // Initialise experiments
                         trialsData = data.experiments;
                         currentTrial = 0;
@@ -169,7 +169,14 @@
             }
             
             $(document).ready(function () {
-                $.get('data/trials.json', function (data) {
+                var trialFile;
+                
+                if(ACPToolKit.getCurrentParticipantId()%2===1) {
+                    trialFile = "data/trials_1.json";
+                } else {
+                    trialFile = "data/trials_2.json";
+                }
+                $.get(trialFile, function (data) {
                     // Initialise experiments
                     trialsData = data.experiments;
                     currentTrial = 0;
@@ -177,7 +184,6 @@
                     $('.js-expt-num-trials').text(totalNumberOfTrials);
                     nextTrial();
                 })
-                
             });
         </script>
     </body>
