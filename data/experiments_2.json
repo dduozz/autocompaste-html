@@ -1,0 +1,403 @@
+{
+    "experiments": [
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "What is apparent power?" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "Approximately 20 Hz to 20 kHz." 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "Information represented as continuously varying voltage or current rather than in discrete levels as opposed to digital data varying between two discrete levels." 
+        },
+        
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "sentence",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "What is apparent power?" 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "sentence",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "Approximately 20 Hz to 20 kHz." 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "sentence",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "Information represented as continuously varying voltage or current rather than in discrete levels as opposed to digital data varying between two discrete levels." 
+        },
+        
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "paragraph",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "What is amplitude? Magnitude or size of a signal voltage or current." 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "paragraph",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "What is band-pass filter? A tuned circuit designed to pass a band of frequencies between a lower cut-off frequency (f1) and a higher cut-off frequency (f2). Frequencies above and below the pass band are heavily attenuated." 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "paragraph",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "What is armature? The rotating or moving component of a magnetic circuit." 
+        },
+        
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "paragraph",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "What is amplitude? Magnitude or size of a signal voltage or current." 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "paragraph",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "What is band-pass filter? A tuned circuit designed to pass a band of frequencies between a lower cut-off frequency (f1) and a higher cut-off frequency (f2). Frequencies above and below the pass band are heavily attenuated." 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "paragraph",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "What is armature? The rotating or moving component of a magnetic circuit." 
+        },
+        
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "phrase",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "in the nucleus of an atom" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "phrase",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "number of positive charges" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "phrase",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "a radiated electromagnetic wave" 
+        },
+        
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "phrase",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "in the nucleus of an atom" 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "phrase",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "number of positive charges" 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "phrase",
+            "numWindows": "2",
+            "data_file": "data/twoFiles.json",
+            "stimuli": "a radiated electromagnetic wave" 
+        },
+        
+
+        
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "What is AC coupling?" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "A number system having only two symbols, 0 and 1." 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "Every noun must be accompanied by the article, if any, corresponding to its definiteness, and the lack of an article (considered a zero article) itself specifies a certain definiteness." 
+        },
+        
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "sentence",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "What is AC coupling?" 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "sentence",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "A number system having only two symbols, 0 and 1." 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "sentence",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "Every noun must be accompanied by the article, if any, corresponding to its definiteness, and the lack of an article (considered a zero article) itself specifies a certain definiteness." 
+        },
+        
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "paragraph",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "What is alkaline cell? A primary cell that delivers more current than a carbon-zinc cell. Also known as an 'alkaline manganese cell'."
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "paragraph",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "Traditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "paragraph",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "What is alternator? Name for an AC generator." 
+        },
+        
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "paragraph",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "What is alkaline cell? A primary cell that delivers more current than a carbon-zinc cell. Also known as an 'alkaline manganese cell'."
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "paragraph",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "Traditionally in English, an article is usually considered to be a type of adjective. In some languages, articles are a special part of speech, which cannot easily be combined with other parts of speech. It is also possible for articles to be part of another part of speech category such as a determiner, an English part of speech category that combines articles and demonstratives (such as 'this' and 'that')." 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "paragraph",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "What is alternator? Name for an AC generator." 
+        },
+        
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "phrase",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "from one state to the other" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "phrase",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "every common noun" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "phrase",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "rises to a maximum" 
+        },
+        
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "phrase",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "from one state to the other" 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "phrase",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "every common noun" 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "phrase",
+            "numWindows": "4",
+            "data_file": "data/fourFiles.json",
+            "stimuli": "rises to a maximum" 
+        },
+        
+        
+        
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "Power supply that delivers an AC voltage." 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "What is bipolar junction transistor?" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "sentence",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times." 
+        },
+        
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "sentence",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "Power supply that delivers an AC voltage." 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "sentence",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "What is bipolar junction transistor?" 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "sentence",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "Power attained in an AC circuit as a product of effective voltage and current which reach their peak at different times." 
+        },
+        
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "paragraph",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "What is autotransformer? A single winding transformer where the output is taken from taps on the winding."
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "paragraph",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "What is active region? The region of BJT operation between saturation and cut off used for linear amplification." 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "paragraph",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "What is bistable multivibrator? A multi vibrator with two stable states. An external signal is required to change the output from one state to the other. Also called a latch." 
+        },
+        
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "paragraph",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "What is autotransformer? A single winding transformer where the output is taken from taps on the winding."
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "paragraph",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "What is active region? The region of BJT operation between saturation and cut off used for linear amplification." 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "paragraph",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "What is bistable multivibrator? A multi vibrator with two stable states. An external signal is required to change the output from one state to the other. Also called a latch." 
+        },
+        
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "phrase",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "between two discrete levels" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "phrase",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "natural difference of potential" 
+        },
+        { 
+            "technique": "TRADITIONAL", 
+            "granularity": "phrase",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "all possible combinations" 
+        },
+        
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "phrase",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "between two discrete levels" 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "phrase",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "natural difference of potential" 
+        },
+        { 
+            "technique": "AUTOCOMPASTE", 
+            "granularity": "phrase",
+            "numWindows": "6",
+            "data_file": "data/sixFiles.json",
+            "stimuli": "all possible combinations" 
+        },
+    ]
+}

@@ -186,9 +186,9 @@
                     var experimentFile;
                 
                     if(ACPToolKit.getCurrentParticipantId()%2===1) {
-                        experimentFile = "data/experiments.json";
+                        experimentFile = "data/experiments_1.json";
                     } else {
-                        experimentFile = "data/experiments.json";
+                        experimentFile = "data/experiments_2.json";
                     }
                     $.get(experimentFile, function (data) {
                         // Initialise experiments
