@@ -91,6 +91,18 @@
             var block = 1;
             var trialMode = true;
             
+            var trialsA = [],trialsB = [];
+            var list = [0, 1, 2];
+            
+            function shuffleTrials(list) {
+                for (var i = list.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var temp = list[i];
+                    list[i] = list[j];
+                    list[j] = temp;
+                }
+                return list;
+            }
             function loadNext() {
                 if(trialMode) {
                     nextTrial();
@@ -121,15 +133,32 @@
                         trialData.push(row);
                     }
 
-                    if (currentTrial < totalNumberOfTrials) {
-                        // Show the next trial
-                        ACPToolKit.presentTrial(trialsData[currentTrial]);
+                    if (currentTrial < totalNumberOfTrials ) { 
+                        if( currentTrial%6 === 0 ) {
+                            trialsA[0] = trialsData[currentTrial];
+                            trialsA[1] = trialsData[currentTrial+1];
+                            trialsA[2] = trialsData[currentTrial+2];
+                            trialsB[0] = trialsData[currentTrial+3];
+                            trialsB[1] = trialsData[currentTrial+4];
+                            trialsB[2] = trialsData[currentTrial+5];
+                            
+                            //decide sequence
+                            list = shuffleTrials(list);
+                            //console.log(list);
+                            // Show the next trial
+                            ACPToolKit.presentTrial(trialsA[list[0]]);
+                            
+                        } else if(currentTrial%6 < 3) { //first technique
+                            // Show the next trial
+                            ACPToolKit.presentTrial(trialsA[list[currentTrial%6]]);
+                        } else {
+                            // Show the next trial
+                            ACPToolKit.presentTrial(trialsB[list[currentTrial%6-3]]);
+                        }
                         currentTrial += 1;
                         $('.js-expt-current-trial').text(currentTrial);
                     } else {
                         // Last trial completed
-                        //ACPToolKit.downloadTrialResults(trialData);
-                        //window.location = 'questionnaire-post.html';
                         if(block < 3) {
                             //continue
                             alert("You have completed "+ block + " block(s)! Please rest for ~1 minute before continuing. Press 'OK' when you are ready.");
@@ -151,10 +180,17 @@
                     $('.js-expt-current-trial').text(currentTrial);
                 } else {
                     // Last trial completed
-                    alert("Hope you have a better understanding through the trials. Now let's start the experiment proper!");
+                    alert("Hope you have a better understanding through the trials. Now let's get started wtih the experiment!");
                     trialMode = false;
                     
-                    $.get('data/trials_1.json', function (data) {
+                    var experimentFile;
+                
+                    if(ACPToolKit.getCurrentParticipantId()%2===1) {
+                        experimentFile = "data/experiments.json";
+                    } else {
+                        experimentFile = "data/experiments.json";
+                    }
+                    $.get(experimentFile, function (data) {
                         // Initialise experiments
                         trialsData = data.experiments;
                         currentTrial = 0;

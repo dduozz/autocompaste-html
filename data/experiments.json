@@ -234,7 +234,7 @@
             "granularity": "phrase",
             "numWindows": "4",
             "data_file": "data/fourFiles.json",
-            "stimuli": "in contrast to" 
+            "stimuli": "every common noun" 
         },
         { 
             "technique": "AUTOCOMPASTE", 
@@ -256,7 +256,7 @@
             "granularity": "phrase",
             "numWindows": "4",
             "data_file": "data/fourFiles.json",
-            "stimuli": "in contrast to" 
+            "stimuli": "every common noun" 
         },
         { 
             "technique": "TRADITIONAL", 
