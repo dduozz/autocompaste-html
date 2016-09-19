@@ -398,6 +398,6 @@
             "numWindows": "6",
             "data_file": "data/sixFiles.json",
             "stimuli": "all possible combinations" 
-        },
+        }
     ]
 }
